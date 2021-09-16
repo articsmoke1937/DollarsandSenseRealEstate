@@ -78,7 +78,11 @@ nav > ul > li {
     margin-right: auto;"
   }
 
-
+p {
+    font-size:20px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 #menunav{
 list-style: none;
 line-height: 2;
@@ -96,14 +100,35 @@ h1{
 h2 {
 
     font-size:40px;
-    color:orange;
-    text-align: left;
-    
+    color:orange; 
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: cookie; lato;
     font-weight: lighter;
+}
+
+.services {
+    background-color: green;
+    color: orange;
+    width: 50%;
+    text-align: center;
+    border: 20px solid orange;
+    padding: 2%;
+    margin: 3%;
+      
+}
+
+.services img{
+    width: 100%
+}
+
+.service-rental{
+    background-color: orange;
+    color: green;
+    width: 50%;
+    text-align: center;
+    border: 20px solid green;
 }
   /*
 #bannerimagelogo {

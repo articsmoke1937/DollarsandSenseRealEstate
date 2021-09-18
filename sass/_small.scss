@@ -4,24 +4,54 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 
 
 body {
+    background-image: url("images/backround.jpg");
+    margin-top: 0px;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgray;
+    background-repeat:repeat;
 }
  /* grid rules*/
- .row {clear: both;}
- .limited{
-     max-width: 2040px;
-     margin:auto
+ .row {
+     width:100%
+     display: flex;
+     flex-wrap: wrap;
  }
- 
- .column{float:left; padding: 0 2vw; margin: 0 0 .75rem 0;}
 
- .small-12{width:100%}
- .small-6 {width:50%}
+@for $i from 1 through 12 {
+    $w: ($i / 12) * 100%;
+    .small-#{$i} {flex-basis: $w;}
+} // END LOOP
+
+ .column{
+    padding: 0 2vw; 
+    margin: 0 0 .75rem 0;
+}
+
+ .small-12{
+    flex-basis: 100%
+}
+
+.limited{
+    max-width: 150em;
+    margin:auto;
+}
+
+.mainimage{
+    max-width: 60em;
+    margin:auto;
+  
+}
+
+.small-6 {
+    width:50%
+}
 
 footer{
     background-color: $primaryColor;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 footer h2{
@@ -30,12 +60,6 @@ footer h2{
     text-transform:uppercase;
     margin: 1rem 0 .3rem 0;
     color: $secondaryColor
-}
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 /* Header Rules */
@@ -47,26 +71,22 @@ header img {
     float: left;
     height: 100px;
     padding-right:10px;
-
 }
 
-header h2, header h1{
-    
+header h2, header h1{ 
     margin: 0;
     color:$secondaryColor;
-    font-weight:300;
+    font-weight:700;
     font-style:italic;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 header h1{
-   
     padding: .5rem 0 0 0;
     font-size: 1.45rem;
 }
 
-header h2 {
-    
+header h2 {  
     padding: .2rem 0 0 0;
     font-size: 1.05rem;
 }
@@ -80,9 +100,18 @@ button#hamburgerbtn{
     padding: 0 30px 0 2vw;
 }
 
-nav {background-color: $secondaryColor}
-nav ul {margin: 0; padding: 0;}
-nav ul li {list-style-type:none; color: $primaryColor;}
+nav {
+    background-color: $secondaryColor
+}
+nav ul {
+    margin: 0; 
+    padding: 0;
+}
+nav ul li {
+    list-style-type:none; 
+    color: $primaryColor;
+    display: flex;
+}
 nav a {
     display: block;
     padding: .8rem 0;
@@ -91,15 +120,16 @@ nav a {
     text-decoration: none;
 }
 
-nav li.active {background-color: rgba(0,0,0,0.5);}
-nav a:hover {background-color: rgba(0,0,0,0.2);}
+nav li.active {background-color: rgba(161, 131, 87, 0.3);}
+nav a:hover {background-color: rgba(219, 176, 126, 0.822);}
 nav ul.open {display: block;}
 nav ul {display: none;}
 
 main img {
     width:100%;
     height: auto;
-    
+    box-shadow: 20px 4px 12px black
+   
 }
 
 main h1, main h3{
@@ -116,7 +146,11 @@ main {
      p { font-size: 1.2rem;
          margin: 0 0 .3rem 0;}
 }
-.services{position: relative;}
+.services{
+    text-align: center;
+    position: relative;
+}
+
 .services h1 {
     text-align: center;
     padding:0 0 2rem

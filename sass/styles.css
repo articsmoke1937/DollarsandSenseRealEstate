@@ -536,11 +536,11 @@ main p {
 }
 
 .services rental {
-    background-color: orange;
-    color: green;
+    background-color: $secondaryColor;
+    color: $primaryColor;
     width: 50rem;
     text-align: center;
-    border: 20rem solid green;
+    border: 20rem solid $primaryColor;
 } */
 @media only screen and (min-width: 768px) {
   header h1 {

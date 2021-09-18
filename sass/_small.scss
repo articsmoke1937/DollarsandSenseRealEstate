@@ -13,15 +13,14 @@ body {
      max-width: 2040px;
      margin:auto
  }
+ 
  .column{float:left; padding: 0 2vw; margin: 0 0 .75rem 0;}
 
  .small-12{width:100%}
  .small-6 {width:50%}
 
-
-
 footer{
-    background-color: green;
+    background-color: $primaryColor;
     font-size: 1.2rem;
 }
 
@@ -30,6 +29,7 @@ footer h2{
     font-style: italic;
     text-transform:uppercase;
     margin: 1rem 0 .3rem 0;
+    color: $secondaryColor
 }
 
 .clearfix:after {
@@ -40,7 +40,7 @@ footer h2{
 
 /* Header Rules */
 header{
-    background-color:green  ;
+    background-color:$primaryColor  ;
 }
 
 header img {
@@ -53,7 +53,7 @@ header img {
 header h2, header h1{
     
     margin: 0;
-    color:orange;
+    color:$secondaryColor;
     font-weight:300;
     font-style:italic;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -80,13 +80,13 @@ button#hamburgerbtn{
     padding: 0 30px 0 2vw;
 }
 
-nav {background-color: orange}
+nav {background-color: $secondaryColor}
 nav ul {margin: 0; padding: 0;}
-nav ul li {list-style-type:none; color: green;}
+nav ul li {list-style-type:none; color: $primaryColor;}
 nav a {
     display: block;
     padding: .8rem 0;
-    color:green;
+    color:$primaryColor;
     text-align: center;
     text-decoration: none;
 }
@@ -97,10 +97,60 @@ nav ul.open {display: block;}
 nav ul {display: none;}
 
 main img {
-    width: 100%;
+    width:100%;
     height: auto;
+    
 }
 
-article header h1{
-    text-align: center;
+main h1, main h3{
+    color: $secondaryColor;
+    font-style: italic;
+    margin: .5rem 0 .1rem 2rem;    
 }
+
+main {
+    h1 {font-size: 3rem;
+        text-align: center; 
+        color:$primaryColor}
+    h3 {font-size: 1.2rem;}
+     p { font-size: 1.2rem;
+         margin: 0 0 .3rem 0;}
+}
+.services{position: relative;}
+.services h1 {
+    text-align: center;
+    padding:0 0 2rem
+}
+
+.services h2, .services p {
+    position:absolute;
+    background-color: $primaryColor;
+    margin:0;
+    width: 92%;
+    padding: .3rem 1rem;
+}
+
+.services h2 {
+    top:0;
+    font-size: 2rem;
+    font-weight:700;
+    color:$secondaryColor;
+}
+
+.services p {
+    bottom:0;
+    font-weight:300;
+    color:$secondaryColor;
+}
+/* .services img {
+    width: 100%
+}
+
+.services rental {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    width: 50rem;
+    text-align: center;
+    border: 20rem solid $primaryColor;
+} */
+

@@ -1,11 +1,11 @@
-﻿ body {
+﻿/*  body {
      margin-top: 0px;
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
      margin-left: auto;
      margin-right: auto;
      background-color: white;
 
- }
+ } */
 
  #mainheader {
      vertical-align: top;
@@ -29,10 +29,10 @@
  #mainbannerhome {
      float: left;
      padding: 0;
-     margin-left: 10em;
+     margin-left: 2em;
  }
 
- nav {
+/*  nav {
      width: 500;
      font-size: 20px;
      line-height: 5;
@@ -48,15 +48,15 @@
  nav>ul>li {
      float: left;
  }
-
- ul>li a {
+ */
+/*  ul>li a {
      display: block;
      color: orange;
      text-align: left;
      padding: 16px;
      text-decoration: none;
      font-weight: bold;
- }
+ } */
 
  #leftmenu {
      float: left;
@@ -80,12 +80,12 @@
      margin-right: auto;
  }
 
- p {
+/*  p {
      font-size: 20px;
      font-weight: bold;
      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
-
+ */
  #menunav {
      list-style: none;
      line-height: 2;
@@ -117,14 +117,9 @@
      font-family: cookie, lato;
      font-weight: lighter;
  }
-
- footer {
+  footer {
      clear: both;
      width: 100%;
- }
-
- */ footer p {
-     color: blue0
  }
 
  .services {

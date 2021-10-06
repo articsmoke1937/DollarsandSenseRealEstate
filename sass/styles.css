@@ -360,15 +360,14 @@ body {
   margin-right: auto;
   background-color: lightgray;
   background-repeat: repeat;
-}
-
-/* grid rules*/
-.row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 
 .small-1 {
@@ -431,9 +430,31 @@ body {
       flex-basis: 100%;
 }
 
+/* grid rules*/
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
 .column {
-  padding: 0 2vw;
+  padding: 0 3vw;
   margin: 0 0 .75rem 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .small-12 {
@@ -471,15 +492,38 @@ footer h2 {
 /* Header Rules */
 header {
   background-color: green;
+  padding-left: 2em;
+}
+
+header > section {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header div {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 header img {
-  float: left;
   height: 100px;
-  padding-right: 10px;
+  padding-right: 1rem;
+  padding-left: 0em;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
 }
 
-header h2, header h1 {
+header h2,
+header h1 {
   margin: 0;
   color: orange;
   font-weight: 700;
@@ -489,12 +533,12 @@ header h2, header h1 {
 
 header h1 {
   padding: .5rem 0 0 0;
-  font-size: 1.45rem;
+  font-size: 2.45rem;
 }
 
 header h2 {
   padding: .2rem 0 0 0;
-  font-size: 1.05rem;
+  font-size: 2.05rem;
 }
 
 /* CSS for Hamburger */
@@ -506,6 +550,7 @@ button#hamburgerbtn {
   padding: 0 30px 0 2vw;
 }
 
+/*CSS for Navigation*/
 nav {
   background-color: orange;
 }
@@ -554,7 +599,9 @@ main img {
           box-shadow: 20px 4px 12px black;
 }
 
-main h1, main h3 {
+/*main content*/
+main h1,
+main h3 {
   color: orange;
   font-style: italic;
   margin: .5rem 0 .1rem 2rem;
@@ -572,7 +619,7 @@ main h3 {
 
 main p {
   font-size: 1.2rem;
-  margin: 0 0 .3rem 0;
+  margin: 0 0 0rem 0;
 }
 
 .services {
@@ -583,14 +630,6 @@ main p {
 .services h1 {
   text-align: center;
   padding: 0 0 2rem;
-}
-
-.services h2, .services p {
-  position: absolute;
-  background-color: green;
-  margin: 0;
-  width: 92%;
-  padding: .3rem 1rem;
 }
 
 .services h2 {
@@ -606,6 +645,235 @@ main p {
   color: orange;
 }
 
+.services h2,
+.services p {
+  position: absolute;
+  background-color: green;
+  margin: 0;
+  width: 88%;
+  padding: .3rem 1rem;
+}
+
+.service-main {
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 3%;
+  margin-right: 2.5%;
+}
+
+.service-pre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.service-pre section:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.firstser {
+  width: 50%;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.secondser {
+  width: 50%;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.service-column {
+  width: 18.7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: orange;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  font-size: small;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 10%;
+  margin: .1rem;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.service-column img {
+  height: 10em;
+  width: 100.3%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.service-column img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.service-column h2 {
+  color: green;
+  text-align: center;
+}
+
+.service-column p {
+  color: green;
+  text-align: center;
+  font-size: 15px;
+}
+
+.service-column small {
+  text-align: center;
+  color: green;
+  font-weight: 700;
+  font-size: larger;
+  margin: .7rem;
+}
+
+.house-image {
+  background-color: black;
+  color: orange;
+  width: 25%;
+  padding: 10px;
+  border-radius: 10%;
+  border-color: green;
+  border: 3px solid white;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  text-align: left;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
+.house-image img {
+  max-height: 200px;
+}
+
+.house-image:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.fig {
+  text-align: right;
+  padding: 1em 01em .6em 2em;
+  background-color: orange;
+  color: green;
+  font-weight: 700;
+}
+
+.family {
+  text-align: center;
+}
+
+.family img {
+  padding: 1em 1em .5em 2em;
+  max-height: 20em;
+  max-width: 10em;
+  border-radius: 20%;
+}
+
+.family img:hover {
+  -webkit-transform: scale(2.3);
+          transform: scale(2.3);
+}
+
+form {
+  margin: 1rem 2%;
+  max-width: 25rem;
+}
+
+form fieldset {
+  border: 1px solid lightgrey;
+  border-radius: .4rem;
+  padding: 0 2%;
+  margin: 2rem 0;
+}
+
+form fieldset legend {
+  text-align: center;
+  color: orange;
+  padding: 0 .4rem;
+}
+
+form label {
+  display: block;
+  padding: .75rem 0;
+}
+
+form label span {
+  font-size: .75rem;
+  color: orange;
+}
+
+form label input, form label textarea {
+  display: block;
+  font-size: 1rem;
+  padding: .75rem;
+  background-color: lightgreen;
+  border: 1px solid black;
+  color: green;
+  margin-top: .2rem;
+  width: 100%;
+}
+
+form label textarea {
+  min-height: 13rem;
+}
+
+form label input:required {
+  border: 2px solid black;
+}
+
+form label input:required:valid {
+  border: green;
+}
+
+form label input:focus, form label textarea:focus {
+  background-color: #ddd;
+}
+
+form input.submitBtn {
+  border: none;
+  background-color: orange;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: .4rem;
+  border-radius: 1rem;
+  width: 100%;
+}
+
 /* .services img {
     width: 100%
 }
@@ -619,12 +887,12 @@ main p {
 } */
 @media only screen and (min-width: 768px) {
   header h1 {
-    font-size: 2.85rem;
+    font-size: 2.55rem;
   }
   header h2 {
-    font-size: 1.5rem;
+    font-size: 2.05rem;
   }
-  header imag {
+  header img {
     height: 100px;
   }
   .medium-6 {
@@ -687,11 +955,36 @@ main p {
     display: none;
   }
   nav ul {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   nav li {
-    width: 20%;
-    float: left;
+    width: 100%;
+  }
+  nav a {
+    padding: .8rem 3rem;
+  }
+  form {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 1rem;
+    max-width: 75rem;
+  }
+  form fieldset {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    margin: 2rem;
   }
 }
 
@@ -749,13 +1042,18 @@ main p {
         flex-basis: 100%;
   }
   nav ul {
-    margin-left: 2vw;
+    margin-left: 1vw;
   }
   nav li {
     width: auto;
   }
   nav a {
     padding: .7rem 1rem;
+  }
+  .service-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=styles.css.map */

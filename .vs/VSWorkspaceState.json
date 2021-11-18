@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css",
-    "\\js"
+    "\\js",
+    "\\pages",
+    "\\sass"
   ],
+  "SelectedNode": "\\images",
   "PreviewInSolutionExplorer": false
 }

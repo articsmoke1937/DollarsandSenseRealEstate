@@ -1,42 +1,165 @@
-header h1 {font-size:  2.55rem;}
-header h2 {font-size: 2.05rem;}
-header img {height:100px}
-
-.medium-6{flex-basis: 50%;}
- .medium-4{flex-basis:33.333333333%}
-
- @for $i from 1 through 12 {
+@for $i from 1 through 12 {
     $w: ($i / 12) * 100%;
-    .medium-#{$i} {flex-basis: $w;}
-} // END LOOP
 
+    .medium-#{$i} {
+        flex-basis: $w;
+    }
+}
+.navcontainer{
+    width:100%;
+   
+    .row{
+       
+        width:100%;
+        margin:auto
+    }
+}
 nav button{display:none;
 }
 nav ul {
         display:flex;
         width:100%;
-        flex-grow: 1;
+        flex-grow:1;
+
+        
 
 }
 nav li {
     width:100%;
+    padding:0;
+    margin:0;
+  
 }
 
 nav a {padding:.8rem 3rem;}
 
-form{
-    justify-content:center;
-    display:flex;
-    margin: 1rem;
-    max-width:75rem;
-    
-    fieldset{
-        justify-content: center;
-        width:100%;
-        margin:2rem
-        
 
-    }    
+
+.servicerow1{
+    img{
+        min-width:0px;
+        width:100%;
+        max-height:80%;
+
+    }
 }
 
+
+
+.footercontain {
+    width: 100%;
+    margin: auto;
+    background-color: $primaryColor;
+    padding:2em ;
+
+    h2 {
+        color: $secondaryColor;
+        font-size: 2.5em;
+        margin: .4em 0em .2em .4em;
+    }
+
+    .row {
+        width: 50%;
+        padding: 2em;
+        margin: auto;
+    }
     
+  
+
+}
+
+.servicerowcontainer {
+    display:contents;
+
+    .row .house{
+        width: 100%;
+        img{
+            min-height:200px;;
+            min-width:100%;
+        }
+        img:hover {
+            transition: all .5s;
+           transform:  rotate(360deg) scale(3.6);
+          // transform:rotate(320deg);
+        }
+    }
+    
+    .row .lane{
+        width: 100%;
+        img{
+            min-height:200px;
+            min-width:100%;
+        }
+        img:hover {
+            transition: all .5s;
+           transform:  rotate(360deg) scale(3.6);
+          // transform:rotate(320deg);
+        }
+    }}
+
+    .propertiescontainer{
+        max-width:90%;
+        margin:auto;
+        flex-basis:20%;
+        img{
+                min-width:350px;
+                max-height:200px;
+                border-radius: 15%;
+                
+        }
+        img:hover {
+            transition: all .5s;
+           transform:  rotate(360deg) scale(1.6);
+          // transform:rotate(320deg);
+        }
+    }
+
+    .servicepics {
+
+        width: 50%;
+        min-height: 30px;
+    
+        .col {
+            flex-basis: 20%;
+            margin: 1em auto;
+            background-color: $secondaryColor;
+            border-radius: 5%;
+            min-height: 500px;
+            min-width: 800px;
+            flex-grow: .3;
+        }
+    
+        img {
+            border-radius: 7%;
+    
+    
+    
+    
+        }
+       
+    
+    
+        h3,
+        p {
+            color: $primaryColor;
+            padding: 0em 0em 0em 0rem;
+            font-size: 3em;
+            margin: .1em;
+            padding: 0;
+            text-align: center;
+        }
+    
+        p {
+            font-size: 2em;
+        }
+    }
+    
+
+    #thanks{
+        h1{
+            font-size:2000%;
+        }
+        img{
+            max-width:7px;
+        }
+    }
